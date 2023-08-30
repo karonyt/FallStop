@@ -8,6 +8,7 @@ MC.world.afterEvents.entityHurt.subscribe((ev) => {
     if(configs.showParticleOnStart) hurtEntity.dimension.spawnParticle(configs.IdOfParticleOnStart, hurtEntity.getHeadLocation(), new MC.MolangVariableMap())
     if(configs.playSoundOnStart) hurtEntity.playSound(configs.IdOfSoundOnStart)
     MC.system.runTimeout(() => {
+        if(configs.showParticleOnStop) hurtEntity.dimension.spawnParticle(configs.IdOfParticleOnStop, hurtEntity.getHeadLocation(), new MC.MolangVariableMap())
         if(configs.playSoundOnStop) hurtEntity.playSound(configs.IdOfSoundOnStop)
         hurtEntity.runCommandAsync(`inputpermission set @s movement enabled`)
     }, damage * configs.stopTimeByDamageValue)
