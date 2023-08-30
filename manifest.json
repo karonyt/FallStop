@@ -1,0 +1,25 @@
+{
+  "format_version": 2,
+  "header": {
+      "description": "落下ダメージに応じた時間、動けなくなるアドオン\nmade by かろん",
+      "name": "Fall Stop",
+      "uuid": "bc5c3567-8833-4c86-add4-4c3a4f3c7893",
+      "version": [ 1, 0, 0 ],
+      "min_engine_version": [ 1, 19, 40 ]
+  },
+  "modules": [
+      {
+          "description": "",
+          "type": "script",
+          "entry": "scripts/main.js",
+          "uuid": "2ccb09d3-8d1f-4cd8-b392-97d17d6c420f",
+          "version": [1, 0, 0]
+      }
+  ],
+  "dependencies": [
+      {
+        "module_name": "@minecraft/server",
+        "version": "1.4.0-beta"
+      }
+  ]
+}
